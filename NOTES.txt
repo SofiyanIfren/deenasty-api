@@ -1,0 +1,46 @@
+Main islamic dynasties
+    - rachidunes (632 - 661)
+    - omeyyades de damas (661 - 750)
+    - omeyyades de bagdad (750 - 1258)
+    - omeyyades de Cordoue (756 - 1031)
+    - fatimide (910 - 1171)
+    - almohade de Marrakech (1147 - 1269) - NO DATA
+    - abbasides du Caire (1262 - 1517)
+    - ottomans (1517 - 1924)
+
+################################################################################
+Ressources to scrap :
++ dynasties
+    - https://en.wikipedia.org/wiki/List_of_Muslim_states_and_dynasties#Mesopotamia_and_Levant_(Iraq,_Syria,_Lebanon,_Jordan,_Palestine)
++ personnages
+    - https://en.wikipedia.org/wiki/List_of_caliphs
+    - https://en.wikipedia.org/wiki/Lists_of_Muslims
+    - https://en.wikipedia.org/wiki/Lists_of_Muslim_scientists_and_scholars
+    - https://en.wikipedia.org/wiki/Lists_of_Islamic_scholars
+    - https://en.wikipedia.org/wiki/List_of_Christian_scientists_and_scholars_of_the_medieval_Islamic_world
++ lieux
+    - https://en.wikipedia.org/wiki/List_of_Arab_countries_by_population
+    - https://en.wikipedia.org/wiki/Lists_of_cities_by_country
+    - ?? https://en.wikipedia.org/wiki/Member_states_of_the_African_Union
++ evenements
+    - https://historyofislam.com/contents/chronology/chronology/
+    - ?? to_filter ?? https://en.wikipedia.org/wiki/Lists_of_battles
++ monuments
+    - https://en.wikipedia.org/wiki/Lists_of_mosques
+    - https://en.wikipedia.org/wiki/List_of_castles_by_country
+    - https://en.wikipedia.org/wiki/List_of_royal_palaces
++ livres
+    - oeuvres des scientifiques
++ mouvements religieux (dur de lier à une autre entité)
+    - https://en.wikipedia.org/wiki/Islamic_schools_and_branches
+
+################################################################################
+Functions to build :
+    getAllDynasties();
+    getAllTowns();
+    getAllCountries();
+    getAllMonuments();
+    getAllMuslims();
+    getAllBooks();
+    getAllReligiousMovements();
+
