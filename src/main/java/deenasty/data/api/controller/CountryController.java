@@ -17,8 +17,16 @@ public class CountryController {
     private CountryService countryService;
 
     @CrossOrigin @GetMapping("/all")
-    public List<Country> getAllCountries(){
-        return countryService.getAllCountries();
+    public List<Country>  getAllCountries(){ return countryService.getAllCountries(); };
+
+    @CrossOrigin @GetMapping("/wiki/all")
+    public List<Country> fetchAllCountries(){
+        return countryService.fetchAllWikipediaCountries();
+    }
+
+    @CrossOrigin @GetMapping("/update/all")
+    public void updateAllCountries(){
+        countryService.updateAllCountries();
     }
 
 }

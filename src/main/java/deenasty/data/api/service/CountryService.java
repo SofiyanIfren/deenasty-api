@@ -12,13 +12,16 @@ import java.util.List;
 public class CountryService {
     @Autowired
     private HttpCountry httpCountry;
-
     @Autowired
     private CountryRepository countryRepository;
 
-    public List<Country> getAllCountries(){
-        String httpCountriesPage = httpCountry.getCountriesHtmlPage();
-        return httpCountry.getAllCountries(httpCountriesPage);
+    public List<Country> fetchAllWikipediaCountries(){
+        return httpCountry.getAllCountries(httpCountry.getCountriesHtmlPage());
     }
-
+    public void updateAllCountries() {
+        countryRepository.saveAll(fetchAllWikipediaCountries());
+    }
+    public List<Country> getAllCountries(){
+        return countryRepository.findAll();
+    }
 }

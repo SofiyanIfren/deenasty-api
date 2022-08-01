@@ -21,15 +21,19 @@ public class HttpCountry {
                 Country country = new Country();
                 country.setName(element.select("a").text());
                 country.setFlagLink("https:" + element.select("span > img").attr("src"));
-                // TODO : get details from html page + add it to the country then return it (City + Langauges)
-                // setCountryDetails(country, getCountryDetailsHtmlPage(country.getName()));
+                addDetailsToCountry(country, getCountryDetailsHtmlPage(country.getName()));
                 countries.add(country);
             }
         }
         return countries;
     }
 
-    public Country setCountryDetails (Country country, String countryDetailsHtmlPage){
+    public Country addDetailsToCountry (Country country, String countryDetailsHtmlPage){
+        Document doc = Jsoup.parseBodyFragment(countryDetailsHtmlPage);
+        Elements mainTbodyNodes = doc.getElementsByClass("infobox-data").select("a");
+        if (!country.getName().equals("Palestine")){ // no capital
+            country.setCapital(mainTbodyNodes.get(0).text());
+        }
         return country;
     }
 
